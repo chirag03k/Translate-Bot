@@ -4,13 +4,18 @@ import iso639
 
 # Connect to Reddit
 pass_file = open("password.txt")
-
 pw = pass_file.read()
 
-reddit = praw.Reddit(client_id="_S9uvbgR7KXKPw",
-                     client_secret="UHsJzpfmEOvp5rhRiV8hanuRA6c",
+id_file = open("id.txt")
+id = pass_file.read()
+
+secret = open("secret.txt")
+secret = pass_file.read()
+
+reddit = praw.Reddit(client_id=id,
+                     client_secret=secret,
                      username="gtranslatebot",
-                     password="1416F0l$0m",
+                     password=pw,
                      user_agent="google translate bot by /u/chirag03k")
 
 
