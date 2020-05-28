@@ -5,12 +5,15 @@ import iso639
 # Connect to Reddit
 pass_file = open("password.txt")
 pw = pass_file.read()
+print(pw)
 
 id_file = open("id.txt")
-id = pass_file.read()
+id = id_file.read()
+print(id)
 
-secret = open("secret.txt")
-secret = pass_file.read()
+secret_file = open("secret.txt")
+secret = secret_file.read()
+print(secret)
 
 reddit = praw.Reddit(client_id=id,
                      client_secret=secret,
